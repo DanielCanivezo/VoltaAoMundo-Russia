@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratos Típicos da Rússia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-image {
+            height: 50vh;
+            max-height: 500px;
+            min-height: 300px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+        }
+        .bg-russian-blue {
+            background-color: #0039a6;
+        }
+        .bg-russian-red {
+            background-color: #d52b1e;
+        }
+        .nav-link:hover {
+            color: #ffcc00 !important;
+        }
+        .dish-card-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .ingredient-list {
+            column-count: 2;
+        }
+    </style>
+    <!-- Estilos Adicionais -->
+<style>
+    .dish-image {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .hover-effect {
+        transition: all 0.3s ease;
+    }
+    .hover-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+    .icon-wrapper {
+        transition: transform 0.3s ease;
+    }
+    .icon-wrapper:hover {
+        transform: rotate(15deg);
+    }
+    .table-hover tbody tr:hover {
+        background-color: rgba(220, 53, 69, 0.1) !important;
+    }
+    .card-header {
+        border-radius: 0 !important;
+    }
+</style>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-russian-blue navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Imagens/russia_flag.png" alt="Bandeira da Rússia" height="30" class="me-2">
+                Rússia
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informacoes.html">Informações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="turismo.html">Turismo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cultura.html">Cultura</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="culinaria.html">Culinária</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   <!-- Hero Image - Carrossel -->
+<div id="russiaCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Imagens/foto1_carousel.jpg" class="d-block w-100 hero-image" alt="Vista de Moscou à noite">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagens/foto2_carousel.jpg" class="d-block w-100 hero-image" alt="São Petersburgo">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagens/foto3_carousel.avif" class="d-block w-100 hero-image" alt="Lago Baikal">
+      </div>
+    </div>
+    <!-- Controles do carrossel (opcional) -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#russiaCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#russiaCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+
+   <!-- Main Content -->
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-danger mb-3">Pratos Típicos da Rússia</h1>
+        <p class="lead fs-3 text-muted">Sabores que contam a história de um povo</p>
+        <div class="d-flex justify-content-center">
+            <div class="border-bottom border-3 border-danger" style="width: 100px;"></div>
+        </div>
+    </div>
+
+    <!-- Pratos Principais -->
+    <div class="row g-4 mb-5">
+        <!-- Borscht -->
+        <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow-sm hover-effect">
+                <div class="position-relative">
+                    <img src="Imagens/comida1.jpg" 
+                         class="card-img-top dish-image" 
+                         alt="Borscht">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 m-2 rounded-pill">
+                        <i class="fas fa-utensils me-1"></i> Sopa Nacional
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-wrapper bg-danger text-white rounded-circle me-3" style="width: 50px; height: 50px; line-height: 50px; text-align: center;">
+                            <i class="fas fa-carrot"></i>
+                        </div>
+                        <h2 class="mb-0">Borscht</h2>
+                    </div>
+                    <p class="card-text fs-5">A icônica sopa de beterraba que conquistou o mundo, com variações regionais por toda a Rússia.</p>
+                    
+                    <div class="row g-3 mt-3">
+                        <div class="col-12">
+                            <div class="p-3 bg-light rounded-3">
+                                <h5 class="text-danger"><i class="fas fa-list-ol me-2"></i> Ingredientes Principais</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Beterraba</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Repolho</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Batata</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Cenoura</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Cebola</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Carne (opcional)</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Smetana</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Endro fresco</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-3 border-start border-4 border-danger bg-light rounded-end">
+                                <h5 class="text-danger"><i class="fas fa-concierge-bell me-2"></i> Como Servir</h5>
+                                <p class="mb-0">Tradicionalmente acompanhado de pão preto escuro (borodinsky) e uma generosa colher de smetana (creme azedo).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+    
+                </div>
+            </div>
+        </div>
+
+        <!-- Pelmeni -->
+        <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow-sm hover-effect">
+                <div class="position-relative">
+                    <img src="Imagens/comida2.avif" 
+                         class="card-img-top dish-image" 
+                         alt="Pelmeni">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 m-2 rounded-pill">
+                        <i class="fas fa-dumpling me-1"></i> Tradicional
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-wrapper bg-danger text-white rounded-circle me-3" style="width: 50px; height: 50px; line-height: 50px; text-align: center;">
+                            <i class="fas fa-pastafarianism"></i>
+                        </div>
+                        <h2 class="mb-0">Pelmeni</h2>
+                    </div>
+                    <p class="card-text fs-5">Os deliciosos "tortellini russos", um prato reconfortante perfeito para o inverno rigoroso.</p>
+                    
+                    <div class="row g-3 mt-3">
+                        <div class="col-12">
+                            <div class="p-3 bg-light rounded-3">
+                                <h5 class="text-danger"><i class="fas fa-list-ol me-2"></i> Ingredientes Principais</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Farinha de trigo</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Ovos</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Água</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Carne moída</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Cebola</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Sal e pimenta</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-3 border-start border-4 border-danger bg-light rounded-end">
+                                <h5 class="text-danger"><i class="fas fa-concierge-bell me-2"></i> Como Servir</h5>
+                                <p class="mb-0">Tradicionalmente com manteiga derretida, vinagrete ou smetana. Na Sibéria, servem com vinagre e pimenta preta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Segunda Linha de Pratos -->
+    <div class="row g-4">
+        <!-- Blini -->
+        <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow-sm hover-effect">
+                <div class="position-relative">
+                    <img src="Imagens/comida3.webp" 
+                         class="card-img-top dish-image" 
+                         alt="Blini">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 m-2 rounded-pill">
+                        <i class="fas fa-pancake me-1"></i> Versátil
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-wrapper bg-danger text-white rounded-circle me-3" style="width: 50px; height: 50px; line-height: 50px; text-align: center;">
+                            <i class="fas fa-bread-slice"></i>
+                        </div>
+                        <h2 class="mb-0">Blini</h2>
+                    </div>
+                    <p class="card-text fs-5">As tradicionais panquecas russas, presentes desde festivais pagãos até a culinária cotidiana.</p>
+                    
+                    <div class="row g-3 mt-3">
+                        <div class="col-md-6">
+                            <div class="p-3 bg-light rounded-3 h-100">
+                                <h5 class="text-danger"><i class="fas fa-list-ol me-2"></i> Ingredientes</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Farinha de trigo</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Leite</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Ovos</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Fermento</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 bg-light rounded-3 h-100">
+                                <h5 class="text-danger"><i class="fas fa-utensils me-2"></i> Recheios Tradicionais</h5>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h6 class="text-danger small">Doces</h6>
+                                        <ul class="list-unstyled small">
+                                            <li><i class="fas fa-honey text-danger me-1"></i> Mel</li>
+                                            <li><i class="fas fa-jar text-danger me-1"></i> Geleia</li>
+                                            <li><i class="fas fa-candy-cane text-danger me-1"></i> Leite condensado</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6 class="text-danger small">Salgados</h6>
+                                        <ul class="list-unstyled small">
+                                            <li><i class="fas fa-fish text-danger me-1"></i> Caviar</li>
+                                            <li><i class="fas fa-bacon text-danger me-1"></i> Salmão</li>
+                                            <li><i class="fas fa-cheese text-danger me-1"></i> Queijo cottage</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                   
+                </div>
+            </div>
+        </div>
+
+        <!-- Beef Stroganoff -->
+        <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow-sm hover-effect">
+                <div class="position-relative">
+                    <img src="Imagens/comida4.avif" 
+                         class="card-img-top dish-image" 
+                         alt="Beef Stroganoff">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 m-2 rounded-pill">
+                        <i class="fas fa-crown me-1"></i> Nobre
+                    </span>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-wrapper bg-danger text-white rounded-circle me-3" style="width: 50px; height: 50px; line-height: 50px; text-align: center;">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h2 class="mb-0">Beef Stroganoff</h2>
+                    </div>
+                    <p class="card-text fs-5">Criado para o Conde Stroganov no século XIX, este prato conquistou o mundo com seu sabor refinado.</p>
+                    
+                    <div class="row g-3 mt-3">
+                        <div class="col-12">
+                            <div class="p-3 bg-light rounded-3">
+                                <h5 class="text-danger"><i class="fas fa-list-ol me-2"></i> Ingredientes Principais</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Filé mignon</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Cogumelos</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Cebola</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Mostarda</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Creme de leite</li>
+                                            <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Caldo de carne</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-3 border-start border-4 border-danger bg-light rounded-end">
+                                <h5 class="text-danger"><i class="fas fa-history me-2"></i> Curiosidade Histórica</h5>
+                                <p class="mb-0">O prato foi criado pelo chef francês do Conde Stroganov, combinando técnicas francesas com ingredientes locais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bebidas Tradicionais -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-russian-blue text-white">
+                    <h3 class="h4 mb-0">
+                        <i class="fas fa-glass-cheers me-2"></i>
+                        Bebidas Tradicionais
+                    </h3>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-danger">
+                                <tr>
+                                    <th><i class="fas fa-wine-bottle me-2"></i> Bebida</th>
+                                    <th><i class="fas fa-info-circle me-2"></i> Descrição</th>
+                                    <th><i class="fas fa-calendar-day me-2"></i> Ocasião</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="icon-wrapper bg-danger bg-opacity-10 text-danger rounded-circle me-3" style="width: 40px; height: 40px; line-height: 40px; text-align: center;">
+                                                <i class="fas fa-glass-whiskey"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Vodka</h6>
+                                                <small class="text-muted">"Água da vida"</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Feita de cereais ou batata, a bebida alcoólica mais associada à Rússia</td>
+                                    <td>Festas, comemorações, acompanhando zakuski (aperitivos)</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="icon-wrapper bg-danger bg-opacity-10 text-danger rounded-circle me-3" style="width: 40px; height: 40px; line-height: 40px; text-align: center;">
+                                                <i class="fas fa-beer"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Kvass</h6>
+                                                <small class="text-muted">Bebida fermentada</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Levemente alcoólica, feita de pão preto fermentado, com sabor levemente adocicado</td>
+                                    <td>Bebida refrescante no verão, vendida em quiosques nas ruas</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="icon-wrapper bg-danger bg-opacity-10 text-danger rounded-circle me-3" style="width: 40px; height: 40px; line-height: 40px; text-align: center;">
+                                                <i class="fas fa-mug-hot"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Chá</h6>
+                                                <small class="text-muted">Do samovar</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Servido tradicionalmente no samovar, muitas vezes com açúcar, geleia ou limão</td>
+                                    <td>Dia a dia, recepção de visitas, após refeições</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="icon-wrapper bg-danger bg-opacity-10 text-danger rounded-circle me-3" style="width: 40px; height: 40px; line-height: 40px; text-align: center;">
+                                                <i class="fas fa-glass-water"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Mors</h6>
+                                                <small class="text-muted">Bebida de frutas</small>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Feita de frutas vermelhas (como amora ou groselha), água e açúcar</td>
+                                    <td>Refresco em qualquer época, especialmente no verão</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer bg-light text-end">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+     <!-- Footer -->
+     <footer class="bg-russian-red text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="text-center mb-0">
+                    <h3>Projeto Volta ao Mundo - Rússia</h3>
+                    <p>Desenvolvido por Daniel Soares</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2023 Site sobre a Rússia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo na Rússia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-image {
+            height: 50vh;
+            max-height: 500px;
+            min-height: 300px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+        }
+        .bg-russian-blue {
+            background-color: #0039a6;
+        }
+        .bg-russian-red {
+            background-color: #d52b1e;
+        }
+        .nav-link:hover {
+            color: #ffcc00 !important;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .carousel-container {
+            height: 450px;
+            overflow: hidden;
+        }
+        .carousel-image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+        }
+    </style>
+    <style>
+        
+        .hover-effect {
+            transition: all 0.3s ease;
+        }
+        .hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+        .carousel-fade .carousel-item {
+            transition: opacity 1s ease-in-out;
+        }
+        .icon-wrapper {
+            transition: transform 0.3s ease;
+        }
+        .icon-wrapper:hover {
+            transform: rotate(15deg);
+        }
+        .table-hover tbody tr:hover {
+            background-color: rgba(220, 53, 69, 0.1) !important;
+        }
+    </style>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-russian-blue navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Imagens/russia_flag.png" alt="Bandeira da Rússia" height="30" class="me-2">
+                Rússia
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informacoes.html">Informações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="turismo.html">Turismo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cultura.html">Cultura</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="culinaria.html">Culinária</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Image - Carrossel -->
+<div id="russiaCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Imagens/foto1_carousel.jpg" class="d-block w-100 hero-image" alt="Vista de Moscou à noite">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagens/foto2_carousel.jpg" class="d-block w-100 hero-image" alt="São Petersburgo">
+      </div>
+      <div class="carousel-item">
+        <img src="Imagens/foto3_carousel.avif" class="d-block w-100 hero-image" alt="Lago Baikal">
+      </div>
+    </div>
+    <!-- Controles do carrossel (opcional) -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#russiaCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#russiaCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Próximo</span>
+    </button>
+  </div>
+
+<!-- Main Content - Turismo -->
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-danger mb-3">Turismo na Rússia</h1>
+        <p class="lead fs-3 text-muted">Descubra os tesouros deste país fascinante</p>
+        <div class="d-flex justify-content-center">
+            <div class="border-bottom border-3 border-danger" style="width: 100px;"></div>
+        </div>
+    </div>
+
+    <!-- Principais Destinos -->
+    <div class="row g-4 mb-5">
+        <div class="col-12">
+            <div class="d-flex align-items-center mb-4">
+                <div class="icon-wrapper bg-danger text-white rounded-circle me-3" style="width: 50px; height: 50px; line-height: 50px; text-align: center;">
+                    <i class="fas fa-map-marked-alt fs-4"></i>
+                </div>
+                <h2 class="mb-0">Principais Destinos</h2>
+            </div>
+        </div>
+
+        <!-- Moscou -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm hover-effect">
+                <div class="position-relative">
+                    <img src="Imagens/moscou.avif" 
+                         class="card-img-top" 
+                         alt="Moscou"
+                         style="height: 200px; object-fit: cover;">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 m-2 rounded-pill">
+                        <i class="fas fa-star me-1"></i> TOP 1
+                    </span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title text-danger">Moscou</h3>
+                    <p class="card-text">A vibrante capital russa que mistura história e modernidade.</p>
+                    
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Praça Vermelha</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Kremlin</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Catedral de São Basílio</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Metrô de Moscou</li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- São Petersburgo -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm hover-effect">
+                <div class="position-relative">
+                    <img src="Imagens/sãopetsburgo.jpg" 
+                         class="card-img-top" 
+                         alt="São Petersburgo"
+                         style="height: 200px; object-fit: cover;">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 m-2 rounded-pill">
+                        <i class="fas fa-star me-1"></i> TOP 2
+                    </span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title text-danger">São Petersburgo</h3>
+                    <p class="card-text">A capital cultural com arquitetura deslumbrante e canais encantadores.</p>
+                    
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Museu Hermitage</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Palácio de Catarina</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Catedral de Santo Isaac</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Teatro Mariinsky</li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                   
+                </div>
+            </div>
+        </div>
+
+        <!-- Lago Baikal -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm hover-effect">
+                <div class="position-relative">
+                    <img src="Imagens/lagobaikal.jpg" 
+                         class="card-img-top" 
+                         alt="Lago Baikal"
+                         style="height: 200px; object-fit: cover;">
+                    <span class="position-absolute top-0 start-0 bg-danger text-white px-3 py-1 m-2 rounded-pill">
+                        <i class="fas fa-heart me-1"></i> Natureza
+                    </span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title text-danger">Lago Baikal</h3>
+                    <p class="card-text">Maravilha natural que contém 20% da água doce não congelada do mundo.</p>
+                    
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Patrimônio da UNESCO</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> 1.642m de profundidade</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Espécies endêmicas</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-danger me-2"></i> Gelo transparente no inverno</li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Outros Destinos -->
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex align-items-center mb-4">
+                <div class="icon-wrapper bg-danger text-white rounded-circle me-3" style="width: 50px; height: 50px; line-height: 50px; text-align: center;">
+                    <i class="fas fa-map fs-4"></i>
+                </div>
+                <h2 class="mb-0">Outros Destinos Imperdíveis</h2>
+            </div>
+
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-danger">
+                                <tr>
+                                    <th class="w-25"><i class="fas fa-city me-2"></i> Cidade/Região</th>
+                                    <th class="w-50"><i class="fas fa-landmark me-2"></i> Atrações Principais</th>
+                                    <th class="w-25"><i class="fas fa-calendar-alt me-2"></i> Melhor Época</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="fw-bold">Kazan</span>
+                                        <div class="small text-muted">Capital do Tatarstão</div>
+                                    </td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li><i class="fas fa-check text-danger me-1"></i> Kremlin de Kazan</li>
+                                            <li><i class="fas fa-check text-danger me-1"></i> Templo de Todas as Religiões</li>
+                                        </ul>
+                                    </td>
+                                    <td>Maio a Setembro</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="fw-bold">Sochi</span>
+                                        <div class="small text-muted">Riviera Russa</div>
+                                    </td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li><i class="fas fa-check text-danger me-1"></i> Estâncias de ski</li>
+                                            <li><i class="fas fa-check text-danger me-1"></i> Praias do Mar Negro</li>
+                                        </ul>
+                                    </td>
+                                    <td>Ano todo</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="fw-bold">Anel de Ouro</span>
+                                        <div class="small text-muted">Cidades históricas</div>
+                                    </td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li><i class="fas fa-check text-danger me-1"></i> Vladimir</li>
+                                            <li><i class="fas fa-check text-danger me-1"></i> Suzdal</li>
+                                            <li><i class="fas fa-check text-danger me-1"></i> Sergiev Posad</li>
+                                        </ul>
+                                    </td>
+                                    <td>Junho a Agosto</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="bg-russian-red text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="text-center mb-0">
+                    <h3>Projeto Volta ao Mundo - Rússia</h3>
+                    <p>Desenvolvido por Daniel Soares</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2023 Site sobre a Rússia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
